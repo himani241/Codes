@@ -1,0 +1,117 @@
+<!--HTML JS and CSS for calculator-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+    <title>calculator</title>
+</head>
+<body>
+  <div class="container">
+    <h3>Calculator</h3>
+    <div class="calculator">
+      <input type="text" name="screen" id="screen">
+      <table>
+        <tr>
+          <td><button>(</button></td>
+          <td><button>)</button></td>
+          <td><button>%</button></td>
+          <td><button>C</button></td>
+        </tr>
+        <tr>
+          <td><button>7</button></td>
+          <td><button>8</button></td>
+          <td><button>9</button></td>
+          <td><button>/</button></td>
+        </tr>
+        <tr>
+          <td><button>4</button></td>
+          <td><button>5</button></td>
+          <td><button>6</button></td>
+          <td><button>x</button></td>
+        </tr>
+        <tr>
+          <td><button>1</button></td>
+          <td><button>2</button></td>
+          <td><button>3</button></td>
+          <td><button>-</button></td>
+        </tr>
+        <tr>
+          <td><button>0</button></td>
+          <td><button>.</button></td>
+          <td><button>=</button></td>
+          <td><button>+</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+/*styling of calculator*/
+.container{
+    text-align: center;
+    margin-top: 25px;
+}
+h3{
+    text-align: center;  
+    font-size: 30px;
+    font-family:'Times New Roman', Times, serif; 
+}
+table{
+    margin: auto;    
+}
+button{
+    font-size: 20px;
+    background-color:rgb(187, 187, 187);
+    width:63px;
+    height: 45px;
+    border:1px solid rgb(80, 31, 31);
+    border-radius: 9px;
+}
+#screen{
+    width: 250px;
+    height: 45px;
+    border:2px solid;
+    margin: 3px;
+    border-radius: 11px;
+    padding-left: 10px;
+    font-size: 20px;
+    background-color:rgb(230, 226, 221);
+}
+.calculator{
+    display: inline-block;
+    border: 2px solid rgb(18, 163, 168);
+    padding: 20px;
+    border-radius: 15px; 
+    background-color: rgb(218, 237, 255);
+}
+//javascript for calculator
+let screen = document.getElementById('screen');
+buttons = document.querySelectorAll('button');
+let screenValue = '';
+for(item of buttons) {
+    item.addEventListener('click', (e) => {
+        buttonText = e.target.innerText;
+        console.log('button text is', buttonText);
+        if (buttonText== 'x') {
+            buttonText = '*';
+            screenValue += buttonText;
+            screen.value = screenValue;
+        }
+        else if (buttonText == 'C') {
+            screenValue = "";
+            screen.value = screenValue;
+        }
+        else if (buttonText == '=') {
+            screen.value = eval(screenValue);
+        }
+        else {
+            screenValue += buttonText;
+            screen.value = screenValue;
+        }
+    });
+}
