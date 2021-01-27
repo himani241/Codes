@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <title>Love Calcy</title>
+    <style>
+        body{
+            background-image:url(love.PNG);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            position: relative;
+        }
+        header{
+            width: 100%;
+            position: absolute;
+            top:30%;
+            left:50%
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="card w-50 m-auto">
+            <div class="card-header text-center bg-danger text-white">LOVE CALCULATOR</div>
+            <div class="card-body">
+                <form class="form-inline w-75 m-auto">
+                    <div class="form-group">
+                        <input type="text" name="" class="form-control text-center" placeholder="Your Name" id="yn"> 
+                    </div>
+                    <div><span class="pl-4 pr-4"> + </span></div>
+                    <div class="form-group">
+                        <input type="text" name="" class="form-control text-center" placeholder="Love Name" id="ln"> 
+                    </div>
+                </form>
+                <br>
+                <div class=" w-75 m-auto text-center">
+                <button class="btn btn-success w-75" onclick="checklove()">Click</button>
+            </div><br>
+            <div>
+                <input type="text" name="" placeholder="Love Percentage" id="lv" class="form-control text-center w-25 m-auto">
+            </div>
+
+            </div>
+            <div class="card-footer text-center">God Bless Your Relationship..!!!</div>
+        </div>
+    </header>
+    <script type="text/javascript"> 
+            function checklove(){
+                var name = document.getElementById('yn').value;
+                var lname = document.getElementById('ln').value;
+                if(name == "" || lname == ""){
+                    alert("Please Enter your name ");
+                }
+                else if(name.length <3 || lname.length <3){
+                    alert("Minimum length is 3");
+                }else if(!isNaN(name)){
+                    alert('Number are not allowed');
+                }
+                else if(!isNaN(lname)){
+                    alert('Number are not allowed');
+                }
+                else{
+                var lvresult  =  Math.random()* 100;
+                lvresult = Math.floor(lvresult);
+                document.getElementById('lv').value = lvresult + "%";
+                }
+            }
+    </script>
+    
+</body>
+</html>
