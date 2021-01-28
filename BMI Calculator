@@ -33,7 +33,7 @@
                     </div>
                    
                     <div class="m-auto text-center">
-                        <button type="submit"  id="bmivalue" class="btn btn-success w-50" onclick="getbmivalue()">Calculate</button>
+                        <button type="submit" class="btn btn-success w-50" onclick="getbmivalue()">Calculate</button>
                     </div><br>
                         <label>BMI Value</label>
                         <input type="text" name="" id="bmivalue"  class="form-control">
