@@ -1,0 +1,39 @@
+//print fizz if number is divisible by 3,print buzz if number is divisible by 5 and if divisible by both 3&5 then print Fizzbuzz
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FizzBuzz</title>
+    </head>
+        <body>
+            <script>
+                var myarray = [];
+                var i=1;
+                function f1(){
+                while(i<=100){
+                    if((i%3)==0  && (i%5)==0){
+                        myarray.push("Fizzbuzz");
+                        //console.log("Fizzbuzz \t");
+                    }
+                    else if((i%3)==0){
+                        myarray.push("Fizz");
+                        //console.log("Fizz \t");
+                    }
+                    else if((i%5)==0){
+                        myarray.push("Buzz");
+                        //console.log("Buzz \t");
+                    }
+                    else{
+                        myarray.push(i);
+                        //console.log(i + "\t");
+                    }
+                    //document.write(i);
+                    i++;
+                }
+                console.log(myarray);
+            }
+            f1();
+            </script>
+        </body>
+</html>
