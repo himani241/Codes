@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var guestname = ["Himani","Shivani","Tejal","Sujal","Tinu",
+        "Twinkle","Geeta","Ram","Seema","Neha"];
+        var name = prompt("what is your name?");
+         var checkname = guestname.includes(name);
+         if(checkname == true){
+            document.write("welcome " + name +" you are invited in party..!!!");
+        }else{ 
+            document.write("Sorry "+name+" you are not invited in party..!!!");
+        }
+    </script>   
+</body>
+</html>
