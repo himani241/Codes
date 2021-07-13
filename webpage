@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<head>
+    <title>demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <script type="text/javascript"></script>
+    <main>
+        <section class="left-sec">
+            <h2>Lorem <br> Ipsum</h2>
+            <list>
+                <del>
+                    <ul>About</ul>
+                </del>
+                <ul>Services</ul>
+                <ul>Cuisine</ul>
+                <ul>Gallery</ul>
+                <ul>Contact</ul>
+                <ul>Book</ul>
+            </list>
+            <button>Cart</button>
+        </section>
+        <section class="center-sec">
+            <h1>What are you</br>
+                having for Lunch?</h1>
+            <div class="card">
+                <div class="child">
+                    <img src="https://th.bing.com/th/id/OIP.pOVYTeSCI22dqyJ2uz4UVgHaHa?pid=ImgDet&rs=1" width="120px"
+                        height="120px">
+                    <b>Mexican Taco</b>
+                </div>
+                <div class="child">
+                    <img src="https://whites-foodequip.co.uk/wp-content/uploads/2016/03/farmhouse-Pizza-768x512.jpg"
+                        width="120px" height="120px">
+                    <b>Farmhouse Pizza</b>
+                </div>
+                <div class="child">
+                    <img src="https://espaniapizzeria.com/wp-content/uploads/2020/05/BBQ-Chicken-burger.png"
+                        width="120px" height="120px">
+                    <b>Chicken Burger</b>
+                </div>
+                <div class="child">
+                    <img src="https://i1.wp.com/mermaidsandmojitos.com/wp-content/uploads/2019/02/loaded-ultimate-chicken-salsa-verde-nachos.png?fit=800%2C1067&ssl=1"
+                        width="120px" height="120px">
+                    <b>Loaded Nachos</b>
+                </div>
+                <div class="child">
+                    <img src="https://th.bing.com/th/id/OIP.Jj15xi_Gvi8KuQg1ajpjWwAAAA?pid=ImgDet&w=474&h=474&rs=1" width="120px"
+                        height="120px">
+                    <b>Hakka Noodles</b>
+                </div>
+            </div>
+        </section>
+        <section class="right-sec">
+            <p>Lorem ipsum dolor sir amet,<br>
+                consectetur adipiscing elit,<br>
+                sed to eiusmod tempor<br>
+                incididunt ut labore et.<br>
+            </p>
+            <hr align="left" width="26%">
+        </section>
+    </main>
+</body>
+</html>
+
+
+<---------------------css--------------------------->
+*{
+    font-family:'DM Serif Text', serif;
+}
+main{
+    width: 100%;
+    justify-content:space-between;
+    display: flex;
+}
+main .right-sec{
+    padding-right: 55px;
+}
+main .left-sec{
+    padding-left: 35px;
+}
+.left-sec h2{
+    font-size: 30px;
+    padding-left: 35px;
+    margin-top: 1.5cm;
+}
+.left-sec ul{
+    font-size: 20px;
+    padding-top: 0.5cm;
+    color: gray;
+}
+.left-sec del{
+    color: rgb(247, 34, 97);
+}
+.left-sec button{
+    margin-top: 60%;
+    margin-left: 30%;
+    padding:11px 40px;
+    text-align: center;
+    font-size: 20px;
+    color:#fff;
+    border-color: rgb(247, 34, 97);
+    background-color: rgb(247, 34, 97);
+    box-shadow: 0 0 20px rgb(224, 219, 220);
+    border-radius: 30px;
+}
+.card{
+    margin-top: 9%;
+    width: 60vw;
+    height: auto;
+    display: flex; 
+    justify-content: space-around;
+    flex-wrap: wrap;
+    transition: all 0.2 linear;
+}
+.child{
+    height: 200px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 0 20px rgb(153, 147, 147);
+    flex: 1 1 40px;
+    margin: 12px;
+    text-align: center;
+}
+.child img{
+    border-radius: 80px;
+    align-content: center;
+    padding-left: 17px;
+    padding: 14px;
+}
+.child:first-child{
+    background-color:white;
+}
+.child:last-child{
+    background-color: white;
+}
+.center-sec h1{
+    padding-left: 10%;
+    padding-top: 4cm;
+    font-size: 55px;
+    font-weight: 600px;
+    margin:3px 0;
+    margin-bottom: 50px;
+    color:#242424;
+}
+.right-sec hr{
+    border: 1px solid rgb(247, 34, 97) ;
+}
+.right-sec p{
+    font-size: 20px;
+    padding-top: 3cm;
+    color: grey;
+}
